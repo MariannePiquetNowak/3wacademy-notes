@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    font-family: 'Germania One', cursive;
+    font-size: 3vw;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 5vw;
+}
+
+.subtitle {
+    font-size: 3.5vw;
+}
+
+#global-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url("../images/background.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#global-container:after {
+    content: '';
+    display: block;
+    padding-top: 50%;
+}
+
+#inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#inner-container > main {
+
+    width: 65%;
+    height: 75%;
+
+
+    background: rgba(255,255,255,0.6);
+}
+
+h1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    margin:0;
+    font-size: 2.5vw;
+}
+
+#shield {
+    width:6vw;
+    position: absolute;
+    left: calc(50% - 8px);
+    transform: translateX(-50%);
+    top:2%
+}
+
+#game-log {
+    padding-top:3%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#game-log ul {
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+#game-log figure {
+    margin:0;
+}
+
+#game-log li:first-child {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Etat du jeu */
+li.game-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:10rem;
+}
+
+li.game-state img {
+    width: 10vw;
+}
+
+li.game-state figure {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+li.game-state figure:first-child {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+/* Journal de partie */
+li.round-log {
+    margin: 2rem 5rem;
+}
+
+li.round-log:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+li.round-log img {
+    width: 30%;
+}
+
+li.round-log h2 {
+    width: 30%;
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 5px dotted black;
+}
+
+li.round-log p {
+    padding-top: 3rem;
+}
+
+li.player-attacks img {
+    float: left;
+    margin-right: 2rem;
+}
+
+li.dragon-attacks img {
+    float: right;
+    margin-left: 2rem;
+}
+
+li.dragon-attacks p {
+    text-align: right;
+}
+
+li.game-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+}
+
+li.game-end p {
+    text-align: center;
+}
+
+li.game-end img {
+    width: 50%;
+}
+
+/* Animated clouds */
+.cloud {
+    position: absolute;
+    z-index:0;
+    opacity: 0.8;
+    animation: cloudPassingBy linear infinite;
+}
+
+#cloud1 {
+    top:5vw;
+    left:-20vw;
+    width: 20%;
+    animation-duration: 50s;
+}
+
+#cloud2 {
+    top:10vw;
+    left:-20vw;
+    width: 20%;
+    animation-duration: 30s;
+}
+
+@keyframes cloudPassingBy {
+    from { transform: translateX(0px); }
+    to { transform: translateX(600%); }
+}
