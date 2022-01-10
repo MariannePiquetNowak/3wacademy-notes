@@ -1,0 +1,131 @@
+body {
+    background-color: #333333 !important;
+}
+
+.header {
+    width: 100%;
+    background: url('../images/Image.png');
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start !important;
+    color: #EF921B;
+
+}
+.header-title {
+    display: flex;
+    flex-direction: column;    
+    margin: 5em;
+    max-width: 500px;
+}
+
+.header-title  h1 {
+    font-size: 5em; 
+    text-transform: uppercase;
+}
+.header-title  i {
+    margin-top: 20px;
+    font-size: 150px;
+}
+
+.movie_descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    color: white !important;
+}
+
+.movie_descr > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie_descr > article > h3 {
+    text-transform: uppercase;
+    padding: 1em 0 1em 0;
+}
+
+.nav-movie {
+    display: flex;
+    justify-content: space-around;
+    width: 500px !important;
+}
+.nav-no-movie {
+    display: flex;
+    flex-direction: column;
+    width: auto !important;
+}
+
+.movie-genre, .movie-note  {
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    margin-bottom: 1em;
+}
+
+.movie-genre p {
+    padding: .5em 1em .5em 1em;
+    margin: 0;
+}
+
+.movie-note > div {
+    padding: .5em 1em .5em 1em;
+    
+} 
+
+.btn-primary {
+    background-color: #EF921B !important;
+    border: none !important;
+    transition: all .2s ease-in-out;
+}
+.btn-primary:hover {
+    background-color: #ef701b !important;
+
+}
+.btn-success {
+    border: none !important;
+    transition: all .2s ease-in-out;
+    background-color: rgb(5, 68, 38);
+}
+.btn-success:hover {
+    background-color: rgb(5, 68, 38);
+}
+
+
+@media screen and (max-width: 400px){
+    .nav-movie {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-movie a:first-child {
+        margin-bottom: 1em;
+
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .header h1 {
+        font-size: 3.5em;
+    }
+
+}
+
+@media screen and (max-width:400px){
+    .header {
+        justify-content: start !important;
+    }
+    .header-title {
+        margin-left: 1em !important;
+        margin-right: 1em !important;
+        align-items: center;
+    }
+    .header-title h1 {
+        font-size: 3em;
+    }
+}

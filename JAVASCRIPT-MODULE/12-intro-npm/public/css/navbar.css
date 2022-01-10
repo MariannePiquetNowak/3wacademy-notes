@@ -1,0 +1,47 @@
+.navbar  {
+    width: 100%;
+}
+
+.fa-play-circle {
+    color: #EF921B;
+    font-size: 30px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+.nav-link:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.nav-link:hover:after { 
+    width: 100%; 
+    left: 0; 
+} */
+.nav-link{text-transform: uppercase;}
+.active::after  {
+    content: "";
+    display: block;
+    width: auto !important;
+    height: 2px;
+    background-color: white !important;
+}

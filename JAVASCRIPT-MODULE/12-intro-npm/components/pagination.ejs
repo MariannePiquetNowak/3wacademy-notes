@@ -1,0 +1,15 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <% if(before < 0) { %>
+            <li class="page-item"><a class="page-link" href="/coming-soon/<%=next%>">Suivant</a></li>
+        <% } %>
+        <% if(before > 0) { %>
+            <li class="page-item mr-5"><a class="page-link" href="/coming-soon/<%=before%>">Précédent</a></li>
+        <% } %>
+            <li class="page-item ml-5"><a class="page-link" href="/coming-soon/<%=next%>">Suivant</a></li>
+      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+    </ul>
+  </nav>
+
