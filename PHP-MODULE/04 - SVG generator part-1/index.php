@@ -20,14 +20,14 @@ $rectangle = new Rectangle(40, 40, "yellow", "black", 0, 1, 50, 50);
 $square = new Square(40, 40, "red", "none", 0, 1, 50, 50);
 // var_dump($square);
 
-$ellipse = new Ellipse(100, 40, "blue", "black", 0, 1, 100, 50);
+// $ellipse = new Ellipse(100, 40, "blue", "black", 0, 1, 100, 50);
 // var_dump($ellipse);
 
 // Test pour savoir si l'exception est ok
-$circle = new Circle(40, 40, "blue", "black", 0, 1, 100, 50);
-$circle2 = new Circle(80, 80, "blue", "black", 0, 1, 100, 50);
+// $circle = new Circle(40, 40, "blue", "black", 0, 1, 100, 50);
+// $circle2 = new Circle(80, 80, "blue", "black", 0, 1, 100, 50);
 // var_dump($circle);
 
 
 // Test d'ajout de plusieurs formes dans le container Svg
-var_dump($svg->add($rectangle, $circle, $ellipse, $circle2));
+var_dump($svg->add($rectangle));

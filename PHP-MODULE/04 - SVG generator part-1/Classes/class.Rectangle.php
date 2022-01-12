@@ -11,5 +11,4 @@ class Rectangle extends Shape {
         $this->_width = $width;
         $this->_height = $height;
     }
-    
 }
