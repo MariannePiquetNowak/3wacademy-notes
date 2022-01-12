@@ -3,14 +3,14 @@
 class Vehicule {
     
     //propriétés
-    private string $_brand;
-    private string $_model;
-    private string $_carType;
-    private string $_color;
-    private int $_power;
-    private string $_motorType;
+    protected string $_brand;
+    protected string $_model;
+    protected string $_carType;
+    protected string $_color;
+    protected int $_power;
+    protected string $_motorType;
     
-    private $Motor;
+    protected $Motor;
 
     
 
@@ -34,7 +34,7 @@ class Vehicule {
     /*
     declencher une erreur si le test n'est pas bon
     */
-    private function testValue($val,int $type) {
+    protected function testValue($val,int $type) {
         
         //test si obligatoire
         if (empty($val)) {
@@ -136,7 +136,7 @@ class Vehicule {
             
             case "nbSpeed":
                 
-                return $this->SMotor->nbSpeed;
+                return $this->Motor->nbSpeed;
                 
                 break;
             
@@ -151,15 +151,15 @@ class Vehicule {
         $this->Motor->start();
     }
     
-    public function accelerateMotor() {
+    public function accelerateMotor(int $opt = 0) {
         $this->Motor->accelerate();
     }
     
-    public function slowMotor() {
+    public function slowMotor(int $opt = 0) {
         $this->Motor->slow();
     }
     
-    public function stepBackMotor() {
+    public function stepBackMotor(int $opt = 0) {
         $this->Motor->stepBack();
     }
     

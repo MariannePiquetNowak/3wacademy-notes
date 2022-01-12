@@ -28,6 +28,12 @@ class Motor {
                 return $this->is_start;
                 
                 break;
+                
+            case "gear":
+             
+                return $this->_gear;
+                
+                break;
             
             default:
             throw new DomainException('Propriété introuvable');

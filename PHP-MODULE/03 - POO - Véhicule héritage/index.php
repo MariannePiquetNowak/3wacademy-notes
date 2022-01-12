@@ -18,17 +18,31 @@ require 'classes/class.Motor.php';
 
 //instance de l'objet
 
-$car = new AllRoad("Renault", "Kangoo", "Citadine", "Rouge", 120, "Essence", 6);
-
+$car = new AllRoad("Renault", "Kangoo", "4x4", "Rouge", 120, "Essence", 6, 4);
 $car->startMotor();
 
-$car->accelerateMotor();
-$car->accelerateMotor();
-$car->accelerateMotor();
+$car->accelerateMotor(1);
 
-$car->slowMotor();
-$car->slowMotor();
-$car->slowMotor();
+$car->accelerateMotor(1);
 
+$car->slowMotor(1);
+
+$car->slowMotor(1);
+
+
+
+// Pour être arrêté, les 2 boites doivent être au point mort
 $car->stopMotor();
+
+// $car->startMotor();
+
+// $car->accelerateMotor();
+// $car->accelerateMotor();
+// $car->accelerateMotor();
+
+// $car->slowMotor();
+// $car->slowMotor();
+// $car->slowMotor();
+
+// $car->stopMotor();
 
