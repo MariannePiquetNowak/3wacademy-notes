@@ -1,0 +1,12 @@
+body {margin: 1em;}
+
+.canva label {width: 10%}
+.props {
+    display: flex;
+
+}
+
+.props > div {margin: 1em}
+
+.show {display: block !important;}
+.rectangle, .ellipse {display: none;}

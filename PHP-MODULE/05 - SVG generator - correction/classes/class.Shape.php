@@ -1,6 +1,6 @@
 <?php
 
-class Shape {
+abstract class Shape {
     //propriétés
     protected $point;
     protected string $fillColor;
@@ -17,4 +17,6 @@ class Shape {
          $this->strokeWidth = $strokeWidth;
          $this->opacity = $opacity;
     }
+
+    abstract public function draw():string;
 }

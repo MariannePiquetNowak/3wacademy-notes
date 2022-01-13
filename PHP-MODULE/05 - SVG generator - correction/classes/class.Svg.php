@@ -40,7 +40,7 @@ class Svg {
     //rendu du svg
     //renvoie le markup html de l'svg
     public function render():string {
-        $svgMarkup = '<svg width="'.$this->width.'px" height="'.$this->height.'px" style="background-color:'.$this->bckColor.'">';
+        $svgMarkup = '<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="'.$this->width.'px" height="'.$this->height.'px" style="background-color:'.$this->bckColor.'">';
         //rajouter les formes
         
         foreach($this->listShapes as $shape) {
