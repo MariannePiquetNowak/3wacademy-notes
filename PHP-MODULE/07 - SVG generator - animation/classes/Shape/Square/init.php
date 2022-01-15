@@ -1,0 +1,5 @@
+<?php
+
+$definitionShape = [
+    'Width' => 'number'
+    ];

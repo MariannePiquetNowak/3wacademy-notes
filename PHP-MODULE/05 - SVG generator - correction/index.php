@@ -1,3 +1,5 @@
+<!-- fichier de la home -->
+
 <!doctype html>
 <html lang="en">
 
@@ -7,10 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <style>
         form {
-            padding-top:100px;
+          padding-top:100px;
             margin:0 auto;
-            width:90%;
+            width:98%;
         }
+
     </style>
 </head>
 
@@ -51,10 +54,41 @@
                         <input class="input" name="svgColor" type="color" placeholder="Color"  value="#000000">
                       </p>
                     </div>
+                    <div class="field">
+                        <div id="menuShape" class="dropdown">
+                          <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                              <span>Nouvelle Forme</span>
+                              <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                              </span>
+                            </button>
+                          </div>
+                          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                              <a href="#" data-shape="Rectangle" class="dropdown-item">
+                                Rectangle
+                              </a>
+                              <a href="#" data-shape="Square" class="dropdown-item">
+                                Carré
+                              </a>
+                              <a href="#" data-shape="Ellipse" class="dropdown-item">
+                                Ellipse
+                              </a>
+                              <a href="#" data-shape="Circle" class="dropdown-item">
+                                Cercle
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div id="shapeMarkup">
+                
+            </div>
             <!-- rectangle -->
-            <input type="hidden" name="shape[]" value="Rectangle" />
+           <!-- <input type="hidden" name="shape[]" value="Rectangle" />
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Rectangle</label>
@@ -126,9 +160,9 @@
                       </p>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- carré -->
-            <input type="hidden" name="shape[]" value="Square" />
+            <!--<input type="hidden" name="shape[]" value="Square" />
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Carré</label>
@@ -190,9 +224,9 @@
                       </p>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- ellipse -->
-            <input type="hidden" name="shape[]" value="Ellipse" />
+            <!--<input type="hidden" name="shape[]" value="Ellipse" />
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Ellipse</label>
@@ -264,9 +298,9 @@
                       </p>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- cercle -->
-            <input type="hidden" name="shape[]" value="Circle" />
+            <!--<input type="hidden" name="shape[]" value="Circle" />
             <div class="field is-horizontal">
                 <div class="field-label is-normal">
                     <label class="label">Circle</label>
@@ -328,81 +362,18 @@
                       </p>
                     </div>
                 </div>
-            </div>
-            <!-- cercle -->
-            <input type="hidden" name="shape[]" value="Circle" />
-            <div class="field is-horizontal">
-                <div class="field-label is-normal">
-                    <label class="label">Circle</label>
-                </div>
-                <div class="field-body">
-                    <div class="field  has-addons">
-                     <p class="control">
-                        <input class="input" name="shape4X" type="number" placeholder="X" value="300">
-                      </p>
-                      <p class="control">
-                        <a class="button is-static">
-                          px
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field  has-addons">
-                     <p class="control">
-                        <input class="input" name="shape4Y" type="number" placeholder="Y" value="300">
-                      </p>
-                      <p class="control">
-                        <a class="button is-static">
-                          px
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field  has-addons">
-                     <p class="control">
-                        <input class="input" name="shape4R" type="number" placeholder="Rayon" value="40">
-                      </p>
-                      <p class="control">
-                        <a class="button is-static">
-                          px
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field">
-                     <p class="control">
-                        <input class="input" name="shape4FillColor" type="color" placeholder="Color" value="#FFEE00">
-                      </p>
-                    </div>
-                    <div class="field  has-addons">
-                     <p class="control">
-                        <input class="input" name="shape4StrockeWidth" type="number" placeholder="StrockeWidth" value="1">
-                      </p>
-                      <p class="control">
-                        <a class="button is-static">
-                          px
-                        </a>
-                      </p>
-                    </div>
-                    <div class="field">
-                     <p class="control">
-                        <input class="input" name="shape4StrokeColor" type="color" placeholder="Color" value="#FFFFFF">
-                      </p>
-                    </div>
-                    <div class="field">
-                     <p class="control">
-                        <input class="input" name="shape4Opacity" type="number" placeholder="Opacity" value="1">
-                      </p>
-                    </div>
-                </div>
-            </div>
+            </div>-->
+            
             <div class="field">
                   <p class="control has-text-centered">
-                    <button id="button" type="submit" class="button is-success">
+                    <button type="submit" class="button is-success">
                       Validation
                     </button>
                   </p>
                 </div>
         </form>
     </div>
-
+    
     <script type="module" src="js/main.js"></script>
 </body>
 

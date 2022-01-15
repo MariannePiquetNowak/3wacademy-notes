@@ -1,6 +1,5 @@
 const shapeList = [];
 
-/***************************onSubmitForm**********************************/
 
 function onSubmitForm(event) {
     //stopper l'event
@@ -13,8 +12,6 @@ function onSubmitForm(event) {
     fetchData(data);
     
 }
-
-/***************************fetchData**********************************/
 
 async function fetchData(formData) {
     //fetch avec du post 
@@ -30,17 +27,12 @@ async function fetchData(formData) {
     document.getElementById("preview").innerHTML = data;
 }
 
-/***************************onClickMenu**********************************/
-
-
 function onClickMenu(event) {
     
     event.preventDefault();
     
     document.getElementById("menuShape").classList.toggle("is-active");
 }
-
-/***************************onClickShape**********************************/
 
 function onClickShape(event) {
     event.preventDefault();
@@ -52,7 +44,7 @@ function onClickShape(event) {
     
     const indexShape = shapeList.length - 1;
     
-   // console.log(indexShape);
+   console.log(indexShape);
     
     document.getElementById("menuShape").classList.remove("is-active");
     
@@ -64,11 +56,8 @@ function onClickShape(event) {
     
 }
 
-/***************************fetchFormShape**********************************/
-
 async function fetchFormShape(s, i) {
-    const response = await fetch("formShape.php?shape=" + s + "&index=" + i).catch(err => console.error(err)); // On construit l'url
-    // console.log(response); // renvoi l'url du formulaire concerné
+    const response = await fetch("formShape.php?shape=" + s + "&index=" + i).catch(err => console.error(err));
     const data = await response.text();
     
     
@@ -78,8 +67,6 @@ async function fetchFormShape(s, i) {
     htmlShape.innerHTML = data;
     document.getElementById("shapeMarkup").append(htmlShape);
 }
-
-
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
@@ -94,5 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelector("#menuShape button").addEventListener("click", onClickMenu);
     
     //actions dans le menu
-    document.querySelectorAll("#menuShape a").forEach(a => a.addEventListener("click", onClickShape));  
+    document.querySelectorAll("#menuShape a").forEach(a => a.addEventListener("click", onClickShape));
+
+    
 });
