@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+nav {
+  min-height: 60px;
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+nav a:link,
+nav a:visited {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  background: linear-gradient(to top, rgba(243, 243, 243, 0.5) 0%, rgba(243, 243, 243, 0.5) 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+  transition: background-size .5s;
+}
+
+nav a:hover {
+  background-size: 100% 100%;
+}
+
+/* nav a.active {
+  background-size: 100% 100%;
+} */
+
+nav a.nav-active
+{
+  background-size: 100% 100%;
+}
+
+
+/******* ARTICLES *******/
+
+.main-articles, 
+.main-authors {
+  margin: 0 auto;
+}
+
+.main-article > .list-articles, 
+.main-authors > .list-authors {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-articles > .list-articles > .article, 
+.main-authors > .list-authors > .author
+ {
+  max-width: 400px;
+  margin: 2rem !important;
+  padding: 1rem;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+
+/******* ARTICLE *******/
+
+.article-content {
+  width: 100%;
+  margin: 0 5rem;
+
+}
+
+.article-content > .article, .article-content > .article-comments {
+  max-width: 600px;
+  padding: 1rem 0;
+}

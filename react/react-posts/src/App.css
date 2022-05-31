@@ -1,0 +1,210 @@
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App h1 {
+  max-width: 400px;
+  text-align: center;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post {
+  color: white;
+  width: 400px;
+  padding: 0.7em 1em;
+  margin: 1em;
+  background-image: linear-gradient(130deg, #1214ab, #0787dd);
+  border-radius: 5px;
+}
+
+.post p {
+  margin-bottom: 2em;
+}
+
+.post a {
+  color: white;
+}
+
+.post-id {
+  color: white;
+  width: auto;
+  padding: 0.7em 1em;
+  margin: 1em;
+  background-image: linear-gradient(130deg, #1214ab, #0787dd);
+  border-radius: 5px;
+}
+
+#select-post-results {
+  margin: 1em 0;
+  width: 80% !important;
+}
+
+#select-post-results label {
+  text-align: start;
+}
+
+.page-link {
+  cursor: pointer;
+}
+.page-link:hover {
+  background-image: linear-gradient(130deg, #1214ab, #0787dd);
+  color: white;
+}
+.page-item:focus {
+  background-color: red;
+}
+.comments-post {
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  max-width: 1300px;
+}
+
+.comment {
+  width: 400px;
+  background-color: #0787dd;
+  padding: 1em;
+  margin: 0.5em 1em;
+}
+
+.active {
+  background-color: #1214ab;
+  color: white;
+}
+.btn-prev {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-next {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-prev:disabled,
+.btn-next:disabled {
+  background-color: #ffffff;
+  border: 1 solid #333333;
+  color: #333333;
+}
+
+/**************** NAVBAR *******************/
+
+.nav {
+  min-height: 60px;
+  background-image: linear-gradient(130deg, #1214ab, #0787dd);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav a:link,
+.nav a:visited {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  background: linear-gradient(
+      to top,
+      rgba(243, 243, 243, 0.5) 0%,
+      rgba(243, 243, 243, 0.5) 10%,
+      transparent 10.01%
+    )
+    no-repeat left bottom / 0 100%;
+  transition: background-size 0.5s;
+}
+
+.nav a:hover {
+  background-size: 100% 100%;
+}
+
+.nav a.nav-active {
+  background-size: 100% 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
