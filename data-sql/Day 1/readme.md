@@ -72,6 +72,8 @@ La clé étrangère d'une table devra avoir les même spécificités que la clé
 
 `INSERT INTO table_name SET champs1='valeur1', champs2='valeur2';`
 
+`ALTER` : Modifie la structure de la table
+
 **Convention pour nommer les tables** 
 Pas d'espaces et pas de caractère spéciaux. Privilégier les underscores.
 Ne pas hésiter à préfixer les tables (ex pour wordpress: wp_admin, wp_user etc.)
@@ -83,3 +85,10 @@ Ne pas hésiter à préfixer les tables (ex pour wordpress: wp_admin, wp_user et
 Exemple : `mysqldump -u root -p db_aviation > /home/marianne/Bureau/db_aviation.sql`
 `mysqldump -u root -p db_name table_name > path/to/file.sql` : export de la table de la db dans un fichier sql sur l'ordinateur
 Exemple : `mysqldump -u root -p db_aviation pilots > path/to/file.sql`
+
+### Fonctions utiles 
+DATE_FORMAT() : Obtient un format de date
+YEAR() : obtient une année
+INSTR() :  obtient la position d’une occurrence dans une chaîne de caractères.
+EXTRACR() : Récupère les minutes, second, jour, heures, microsecondes, heure par secondes etc...
+https://sql.sh/fonctions
